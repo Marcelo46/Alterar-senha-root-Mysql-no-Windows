@@ -1,5 +1,5 @@
-# Alterar-senha-root-Mysql-no-Windows
-Como alterar a senha root do banco de dados Mysql no windows em ambiente local, caso perca ou precise alterar a senha. Sem utilizar permissões especiais.
+# Alterar-senha-root-MySql-no-Windows
+Como alterar a senha root do banco de dados MySql no windows em ambiente local, caso perca ou precise alterar a senha. Sem utilizar permissões especiais.
 ### Parar serviço banco de dados
 Para alterar a senha do banco de dados é necessário parar o serviço no Windows.
 No campo de pesquisa busque por **Serviços**, conforme imagem.
@@ -17,7 +17,7 @@ Inicie o bloco de notas como administrador. Copie e cole este trecho de código:
 
 ```ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';```
 
-Altere a senha para a senha que desejar. Salve em C:\ com o nome de **Reset.txt**
+Altere a senha para a senha que desejar. Salve em C:\ com o nome de **reset.txt**
 
 Inicie o **CMD** do windows como administrador. Conforme imagem.
 
@@ -34,7 +34,7 @@ No **CMD**, estando dentro da pasta **bin** do MySql, copie e cole este trecho d
 
 `O trecho de código acima precisa estar em apenas uma linha`
 
-Pronto! Sua senha root foi alterada. Reinicie o serviço do banco de dados no Windows. E pode iniciar o seu gerenciador de banco de dado.
+Pronto! Sua senha root foi alterada. Reinicie o serviço do banco de dados no Windows. E pode iniciar o seu gerenciador de banco de dados.
 Em alguns casos pode ser necessário reiniciar o computador.
 
 
