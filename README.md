@@ -1,15 +1,36 @@
 # Alterar-senha-root-Mysql-no-Windows
 Como alterar a senha root do banco de dados Mysql no windows em ambiente local, caso perca ou precise alterar a senha. Sem utilizar permissões especiais.
-### Instalação do ambiente
+### Parar serviço banco de dados
 Para alterar a senha do banco de dados é necessário parar o serviço no Windows.
 No campo de pesquisa busque por **Serviços**, conforme imagem
-<img src="img\parar servico mysql.png">
+
+<img src="img\servicos.png">
 
 Em **Serviços** encontre o serviço do MySQL conforme a versão instalada em sua máquina.
 Clique o botão direito do mouse e clique em **Parar**
+
 <img src="img\parar servico mysql.png">
 
-Acesse a página do [Ruby](https://www.ruby-lang.org/pt/) e clique em Baixe o Ruby 
+### Criar arquivo de texto que será utilizado para trocar a senha do MySql
 
-![Slide1](https://user-images.githubusercontent.com/34240983/117578465-d9dab600-b0c4-11eb-8393-da6c455d55a5.PNG)
+Inicie o bloco de notas como administrador. Copie e cole este trecho de código:
+
+```ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';```
+
+Altere a senha para a senha que desejar. Salve em C:\ com o nome de **Reset.txt**
+
+Inicie o **CMD** do windows como administrador. Conforme imagem.
+
+<img src="img\cmd.png">
+
+Se seu banco de dados estiver instalado no caminho padrão, basta copiar e colar este comando no **CMD** e clicar Enter.
+
+```cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"```
+
+Se estiver instalado em outro endereço, é necessário abrir no **CMD** o local da pasta onde o MySql está instalado.
+No **CMD** estando dentro da pasta **bin** do MySql copie e cole este trecho de código:
+
+```mysqld
+--defaults-file="C:\\ProgramData\\MySQL\\MySQL Server 8.0\\my.ini"
+--init-file=C:\\mysql-init.txt```
 
