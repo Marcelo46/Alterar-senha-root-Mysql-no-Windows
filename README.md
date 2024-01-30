@@ -23,7 +23,7 @@ Inicie o **CMD** do windows como administrador. Conforme imagem.
 
 <img src="img\cmd.png">
 
-Se seu banco de dados estiver instalado no caminho padrão, basta copiar e colar este comando no **CMD** e clicar Enter.
+Se seu banco de dados estiver instalado no caminho padrão, basta copiar e colar o comando abaixo no **CMD** e clicar Enter.
 
 ```cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"```
 
@@ -32,7 +32,7 @@ No **CMD**, estando dentro da pasta **bin** do MySql, copie e cole este trecho d
 
 ```mysqld --defaults-file="C:\\ProgramData\\MySQL\\MySQL Server 8.0\\my.ini" --init-file=C:\\reset.txt```
 
-`Este trecho de código precisa estar em apenas uma linha` `#ffffff`
+`O trecho de código acima precisa estar em apenas uma linha`
 
 Pronto! Sua senha root foi alterada. Reinicie o serviço do banco de dados no Windows. E pode iniciar o seu gerenciador de banco de dado.
 Em alguns casos pode ser necessário reiniciar o computador.
